@@ -6,6 +6,27 @@ const title = () => {
     return element; 
 }
 
+const navBar = () => {
+    const navBar = document.createElement('div');
+    const homeButton = document.createElement('button');
+    const orderButton = document.createElement('button');
+    const aboutButton = document.createElement('button');
+    
+    homeButton.innerHTML = 'Home';
+    orderButton.innerHTML = 'Order';
+    aboutButton.innerHTML = 'About';
+
+    homeButton.id = 'homeButton';
+    orderButton.id = 'orderButton';
+    aboutButton.id = 'aboutButton';
+
+    navBar.appendChild(homeButton);
+    navBar.appendChild(orderButton);
+    navBar.appendChild(aboutButton);
+
+    return navBar
+}
+
 const picture = () => {
     const pic = document.createElement('img');
 
@@ -30,7 +51,10 @@ const text = () => {
 const createHomepageDiv = () => {
     const div = document.createElement('div');
 
+    div.id = 'page';
+
     div.appendChild(title());
+    div.appendChild(navBar());
     div.appendChild(picture());
     div.appendChild(text());
 
