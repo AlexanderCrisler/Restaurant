@@ -8,15 +8,16 @@ const createPage = (createFunc) => {
     if (document.getElementById("page") != null) {
         mainPage.removeChild(document.getElementById("page"));
     }
+
     mainPage.append(createFunc());
 
     const homeButton = document.getElementById("homeButton");
     const orderButton = document.getElementById("orderButton");
     const aboutButton = document.getElementById("aboutButton");
 
-    homeButton.onclick = (createHomepageDiv) => { createPage(createHomepageDiv); };
-    orderButton.onclick = (createOrderPageDiv) => { createPage(createOrderPageDiv); };
-    aboutButton.onclick = (createAboutPageDiv) => { createPage(createAboutPageDiv); };
+    homeButton.onclick = () => { createPage(createHomepageDiv); };
+    orderButton.onclick = () => { createPage(createOrderPageDiv); };
+    aboutButton.onclick = () => { createPage(createAboutPageDiv); };
 }
 
 createPage(createHomepageDiv);
