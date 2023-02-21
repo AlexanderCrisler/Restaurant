@@ -1,7 +1,7 @@
 const title = () => {
     const element = document.createElement('h1');
 
-    element.innerHTML = "Hello Restaurant";
+    element.innerHTML = "About";
     
     return element; 
 }
@@ -19,15 +19,16 @@ const text = () => {
 
     text.innerHTML = 
         " \
-        Hello Restauraunt is a modern take on \
-        Pizza. From our world reknown chefs from Italy, \
-        we bring you the perfect pizza for your lifestyle. \
+        We have always been here, \
+        We will always be here, \
+        You are the invader. \
+        It's Pizza Time. \
         ";
     
     return text;
 }
 
-const createHomepageDiv = () => {
+const createAboutPageDiv = () => {
     const div = document.createElement('div');
 
     div.id = 'page';
@@ -39,4 +40,4 @@ const createHomepageDiv = () => {
     return div
 }
 
-export default createHomepageDiv;
+export default createAboutPageDiv;
